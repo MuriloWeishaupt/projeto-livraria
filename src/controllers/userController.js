@@ -5,10 +5,20 @@ import { AppDataSource } from "../database/data-source.js";
 const routes = express.Router();
 const userRepository = AppDataSource.getRepository(user);
 
-routes.get("/",  async (request, response) => {    
-    response.status(200).send("Deu tudo certo!🐭")
+routes.get("/",  async (request, response) => {  
+    const users = await userRepository.find();  
+    response.status(200).send({"message": users})
 });
 
+routes.get("/:nameFound", async (request, response) => {  
+    const {nameFound} = request.params;  
+    const userFound = await userRepository.findBy({name:Like(`%${nameFound}%`)})
+    return response.status(200).send({"response":userFound})
+});
+
+
+
+//Adicionar Usuário
 routes.post("/", async (request,response) =>{
 
     const {name, email, password,typeUser} = request.body;
@@ -39,5 +49,9 @@ routes.post("/", async (request,response) =>{
     return response.status(201).send({"response":"Usuario cadastrado com sucesso"});
     
 });
+
+
+
+
 
 export default routes;

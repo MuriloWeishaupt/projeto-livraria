@@ -8,7 +8,7 @@ const AppDataSource = new DataSource({
     host: "localhost",
     username: "root",
     port: 3306,
-    password: "",
+    password: "etecembu@123",
     database: "livraria",
     entities: ["src/entities/*.js"], 
     migrations: ["src/database/migrations/*.cjs"],
