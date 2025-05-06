@@ -46,10 +46,43 @@ routes.post("/", async (request,response) =>{
     }
         
 
-    return response.status(201).send({"response":"Usuario cadastrado com sucesso"});
+    return response.status(201).send({"response":"Usuário cadastrado com sucesso"});
     
 });
 
+routes.put("/", async (request, response) => {
+    const {id, name, email, password, typeUser} = request.body;
+
+    if (typeof id != "number") {
+        response.status(400).send({"response": "Campo id deve ser numérico"})
+    }
+
+
+    if(name.length < 1){
+        return response.status(400).send({"response":"Campo name deve ter pelo menos 1 caractere."});
+    }
+    if(!email.includes("@") || !email.includes(".") || email.length < 5){
+        return response.status(400).send({"response":"Formato de email invalido"});
+    }
+    if(password.length < 6){
+        return response.status(400).send({"response":"Senha deve ter no mínimo 6 caracteres"});
+    }
+    if(typeUser !== "admin" && typeUser !== "comum"){
+        return response.status(400).send({"response":"O campo deve ser preenchido como 'admin' ou 'comum'"});
+    }
+
+    await userRepository.update({id}, {name, email, password, typeUser});
+    return response.status(201).send({"response": "Usuário Atualizado com sucesso!"})
+})
+
+
+routes.delete("/:id", async (request, response) => {
+    const userDelete = request.params.id;
+    if (!userDelete) {
+        response.status(404).send({"response": "Id de usuário não encontrado!"});
+    }
+
+})
 
 
 

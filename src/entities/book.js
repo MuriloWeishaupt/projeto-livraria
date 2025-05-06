@@ -1,6 +1,6 @@
 import { EntitySchema } from "typeorm";
 
-const author = new EntitySchema({
+const book = new EntitySchema({
     name: 'book',
     tableName: "book",
     columns: {
@@ -15,8 +15,8 @@ const author = new EntitySchema({
 
     relations: {
         category: {type: "many-to-one", target: "category", nullable: false},
-        editor: {type: "many-to-one", target: "editor", nullable: false}
+        editor: {type: "many-to-one", target: "publisher", nullable: false}
     },
 })
 
-export default author
+export default book

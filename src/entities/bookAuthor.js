@@ -1,11 +1,11 @@
 import { EntitySchema } from "typeorm";
 
-const author = new EntitySchema({
+const bookAuthor = new EntitySchema({
     name: 'bookAuthor',
     tableName: "bookAuthor",
     columns: {
         authorId: {primary: true, type: Number, generated: true},
-        bookId: {primary: true, type: Number, generated: true},
+        bookId: {primary: true, type: Number, generated: false},
         createdAt: {type: "datetime", nullable: false, default: () => "CURRENT_TIMESTAMP"},
         deletedAt: {type: "datetime", nullable: true}
     },
@@ -16,4 +16,4 @@ const author = new EntitySchema({
     },
 })
 
-export default author
+export default bookAuthor
