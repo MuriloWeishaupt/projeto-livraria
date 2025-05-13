@@ -1,12 +1,14 @@
 import express, { request, response } from "express";
 import user from "../entities/user.js";
 import { AppDataSource } from "../database/data-source.js";
+import { Timestamp } from "typeorm";
+import { Like, IsNull } from 'typeorm'
 
 const routes = express.Router();
 const userRepository = AppDataSource.getRepository(user);
 
 routes.get("/",  async (request, response) => {  
-    const users = await userRepository.find();  
+    const users = await userRepository.findBy({deleteAt: IsNull()});  
     response.status(200).send({"message": users})
 });
 
@@ -50,6 +52,7 @@ routes.post("/", async (request,response) =>{
     
 });
 
+//Atualizar usuário
 routes.put("/", async (request, response) => {
     const {id, name, email, password, typeUser} = request.body;
 
@@ -77,10 +80,13 @@ routes.put("/", async (request, response) => {
 
 
 routes.delete("/:id", async (request, response) => {
-    const userDelete = request.params.id;
-    if (!userDelete) {
-        response.status(404).send({"response": "Id de usuário não encontrado!"});
+    const { id} = request.params;
+    if (isNaN(id)) {
+        response.status(400).send({"response": "ID não é um valor numérico!"});
     }
+
+    await userRepository.update({id}, {deleteAt: () => "CURRENT_TIMESTAMP"});
+    return response.status(200).send({"response": "Usuário excluído com sucesso!"})
 
 })
 
