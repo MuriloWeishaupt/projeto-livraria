@@ -1,16 +1,16 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import user from "../entities/user.js";
-import author from "../entities/author.js"
+import author from "../entities/author.js";
 
 const AppDataSource = new DataSource({
     type: "mysql",
-    host: "localhost",
+    host: "interchange.proxy.rlwy.net",
+    port: 25588,
     username: "root",
-    port: 3306,
-    password: "etecembu@123",
-    database: "livraria",
-    entities: ["src/entities/*.js"], 
+    password: "cryzGzDeaiExwqmtKulTPEuesyUlISyF",
+    database: "railway",
+    entities: ["src/entities/*.js"],
     migrations: ["src/database/migrations/*.cjs"],
 });
 
