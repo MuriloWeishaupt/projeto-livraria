@@ -1,20 +1,20 @@
 type: collection.insomnia.rest/5.0
-name: My first collection
+name: livraria PW
 meta:
-  id: wrk_4d329013dbe44ff8aa7515c59e9b1576
-  created: 1748486552205
-  modified: 1748486552205
+  id: wrk_609878b70e754621abe08ebbc9397f7a
+  created: 1749171662892
+  modified: 1749175514742
 collection:
   - name: PW II
     meta:
-      id: fld_2654b232180d432d9ac1b79d73083ce1
+      id: fld_a2253083d58842ad904e00ab7d1e920f
       created: 1747355922668
       modified: 1747694729991
       sortKey: -1747355922668
     children:
       - name: Usuário
         meta:
-          id: fld_9b81306f91eb4521bd363bced491c660
+          id: fld_a5fcedb7ea2f4b17abd16b287cf1eabf
           created: 1747356826658
           modified: 1747697048750
           sortKey: -1747356826808
@@ -22,7 +22,7 @@ collection:
           - url: localhost:3333/user/
             name: Buscar Usuário
             meta:
-              id: req_1fdf4f9aee8345c4b1d001780b3b9423
+              id: req_885b0d2ed02f4f7fb9566bd47271e058
               created: 1745885142312
               modified: 1747356837556
               isPrivate: false
@@ -46,7 +46,7 @@ collection:
           - url: localhost:3333/user/
             name: Buscar Usuário Por Nome
             meta:
-              id: req_7edcaba0b58a4df8b3f9da8b00557ffa
+              id: req_60e51e2229cd4df080ce04ddcd09c977
               created: 1747355952504
               modified: 1747356849351
               isPrivate: false
@@ -67,12 +67,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/user/
+          - url: localhost:3000/user/
             name: Cadastrar Usuário
             meta:
-              id: req_a7d8f5300ac94a069a69109d42d6c9e8
+              id: req_316a6539752f4a73ac4df915d78feaf8
               created: 1747356038394
-              modified: 1747356847306
+              modified: 1749173296044
               isPrivate: false
               sortKey: -1747356834989
             method: POST
@@ -101,7 +101,7 @@ collection:
           - url: localhost:3333/user/
             name: Atualizar Usuário
             meta:
-              id: req_af42c4df91c24648a311172a557f2579
+              id: req_d3fe39678e224486b298bd360cb508af
               created: 1747356391199
               modified: 1747356845675
               isPrivate: false
@@ -133,7 +133,7 @@ collection:
           - url: localhost:3333/user/3
             name: Delete Usuário
             meta:
-              id: req_73fed6aa776b45c5bff06aac56602f58
+              id: req_e9a542d3677e46d6bf35700e33ac8721
               created: 1747356719924
               modified: 1747356834736
               isPrivate: false
@@ -156,17 +156,17 @@ collection:
               rebuildPath: true
       - name: Autor
         meta:
-          id: fld_f7d2e0da58dd4a4a96db657c5250de1b
+          id: fld_8af568765262444eb07838a300d8017e
           created: 1747356859651
           modified: 1747356862514
           sortKey: -1747356826758
         children:
-          - url: localhost:3333/autor
+          - url: localhost:3333/author
             name: Buscar Autores
             meta:
-              id: req_d6d78d2bc74d4b5d8cd3ee010f45f62f
+              id: req_53759d5718d24108a76cdc89a100bb71
               created: 1747356874254
-              modified: 1747695585202
+              modified: 1749175391054
               isPrivate: false
               sortKey: -1747356876104
             method: GET
@@ -185,12 +185,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/autor/emerso
+          - url: localhost:3333/author/emerso
             name: Buscar Autor Por Nome
             meta:
-              id: req_e993764b383f4b7092f544b964abb1f2
+              id: req_2d6a033fa9304e67b43ab24e1670eacd
               created: 1747356967254
-              modified: 1747356995042
+              modified: 1749175405171
               isPrivate: false
               sortKey: -1747356855596.5
             method: GET
@@ -205,12 +205,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/autor
+          - url: localhost:3333/author
             name: Cadastro Autor
             meta:
-              id: req_ba33d1e1a55742a2b4548650d123e903
+              id: req_e40b8789851c4204bca5b5bc860e6d39
               created: 1747357182872
-              modified: 1747357442193
+              modified: 1749175400981
               isPrivate: false
               sortKey: -1747356865850.25
             method: POST
@@ -235,12 +235,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/autor
+          - url: localhost:3333/author
             name: Atualizar Autor
             meta:
-              id: req_3a0d4bba4576462ca3bebb058f6e5dfd
+              id: req_ef8e7cda177649d691c8506594528e43
               created: 1747357484835
-              modified: 1747698604831
+              modified: 1749175394877
               isPrivate: false
               sortKey: -1747356870977.125
             method: PUT
@@ -266,12 +266,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/autor/1
+          - url: localhost:3333/author/1
             name: Deletar Autor
             meta:
-              id: req_cfe3c53dd3cb40b9ae8a1b670d6bf038
+              id: req_f6882305a5f74f5ead92164d04df9ac0
               created: 1747357547121
-              modified: 1747698617924
+              modified: 1749175397217
               isPrivate: false
               sortKey: -1747356868413.6875
             method: DELETE
@@ -292,17 +292,17 @@ collection:
               rebuildPath: true
       - name: Categoria
         meta:
-          id: fld_70e47fadb1284f8c81459d7daacaf1dd
+          id: fld_1921fe5cf60346b59d18d5e4855ced0d
           created: 1747358628828
           modified: 1747435513346
           sortKey: -1747356261664.25
         children:
-          - url: localhost:3333/categoria/
+          - url: localhost:3333/category/
             name: Buscar Categoria
             meta:
-              id: req_5cb0ca1739c04e2bb65124faa3b853fa
+              id: req_d54d2f0843824679a13153eb02095905
               created: 1747358628831
-              modified: 1747358743908
+              modified: 1749175423335
               isPrivate: false
               sortKey: -1747356834789
             method: GET
@@ -321,12 +321,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/categoria/
+          - url: localhost:3333/category/
             name: Buscar Categoria Por Nome
             meta:
-              id: req_b0a49be71cf446ed8103c71294f32a42
+              id: req_b7c05fd0b8e8413e8ec2cc23f34b2d11
               created: 1747358628834
-              modified: 1747358722909
+              modified: 1749175412698
               isPrivate: false
               sortKey: -1747356835089
             method: GET
@@ -345,12 +345,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/categoria/
+          - url: localhost:3333/category/
             name: Cadastrar Categoria
             meta:
-              id: req_549ebe28e8ff4ca3bd8957eabd28b006
+              id: req_fe9bd37a68ac4f2698d380dad69c8672
               created: 1747358628837
-              modified: 1747698638468
+              modified: 1749175415951
               isPrivate: false
               sortKey: -1747356834989
             method: POST
@@ -373,12 +373,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/categoria/
+          - url: localhost:3333/category/
             name: Atualizar Categoria
             meta:
-              id: req_7cbc24b3599740fbb92301cb604bad7d
+              id: req_d43f80645da64967ad603cd924be04a3
               created: 1747358628840
-              modified: 1747698693466
+              modified: 1749175419348
               isPrivate: false
               sortKey: -1747356834889
             method: PUT
@@ -402,12 +402,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/categoria/3
+          - url: localhost:3333/category/3
             name: Delete Categoria
             meta:
-              id: req_2b75ed22ab914450ba67c61ecd92d7ab
+              id: req_72b3ef2c330c4edf8ca0e3a918684ce5
               created: 1747358628842
-              modified: 1747358748114
+              modified: 1749175427139
               isPrivate: false
               sortKey: -1747356834689
             method: DELETE
@@ -428,17 +428,17 @@ collection:
               rebuildPath: true
       - name: Editora
         meta:
-          id: fld_f0bd0eb0526a474e9653c7ff5347db9a
+          id: fld_438e714bf829401ab7ab5d9f17ee86b0
           created: 1747358891495
           modified: 1747668480695
           sortKey: -1747356148665.5
         children:
-          - url: localhost:3333/editora/
+          - url: localhost:3333/publisher/
             name: Buscar Editora
             meta:
-              id: req_d92db20fadaa40d992824141d9deab3c
+              id: req_60ae969e08b64ecf9706a08ae8b05d36
               created: 1747358891497
-              modified: 1747668917842
+              modified: 1749175447156
               isPrivate: false
               sortKey: -1747356834789
             method: GET
@@ -457,12 +457,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/editora/
+          - url: localhost:3333/publisher/
             name: Buscar Editora Por Nome
             meta:
-              id: req_2ebca982f98541608d0074eccdf53e25
+              id: req_67fa6bfa325c4d7184794016fbff0c84
               created: 1747358891500
-              modified: 1747668519441
+              modified: 1749175436724
               isPrivate: false
               sortKey: -1747356835089
             method: GET
@@ -481,12 +481,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/editora/
+          - url: localhost:3333/publisher/
             name: Cadastrar Editora
             meta:
-              id: req_aa66b4ff6c1c4ade97f6175e7ce766fd
+              id: req_4cb8213575864ef4a192b815fd6f10ae
               created: 1747358891502
-              modified: 1747698722539
+              modified: 1749175441629
               isPrivate: false
               sortKey: -1747356834989
             method: POST
@@ -511,12 +511,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/editora/
+          - url: localhost:3333/publisher/
             name: Atualizar Editora
             meta:
-              id: req_de8eea0f605c4308b321551146cc6e57
+              id: req_f1160b4446dc4d92bf61f0eedcfd8e5e
               created: 1747358891505
-              modified: 1747698761311
+              modified: 1749175445119
               isPrivate: false
               sortKey: -1747356834889
             method: PUT
@@ -542,12 +542,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/editora/3
+          - url: localhost:3333/publisher/3
             name: Delete Editora
             meta:
-              id: req_6a81723160e244efb5ab2cacd4b5d1b0
+              id: req_ae3dbaaeee1d487f997a62c629b1bfa0
               created: 1747358891508
-              modified: 1747698771904
+              modified: 1749175449302
               isPrivate: false
               sortKey: -1747356834689
             method: DELETE
@@ -568,23 +568,29 @@ collection:
               rebuildPath: true
       - name: Livro
         meta:
-          id: fld_52bdcc41e41a471dba09add8b8a2e434
+          id: fld_753d05ebda86473ca2a6e935a07ecdc9
           created: 1747694824270
           modified: 1747697043851
           sortKey: -1747356826858
         children:
-          - url: localhost:3333/livro
+          - url: localhost:3000/book
             name: Buscar Livro
             meta:
-              id: req_7e5bea8a90774c00ba90c0ebdd071346
+              id: req_0382c1112b244b198cc165607f09b609
               created: 1747694824272
-              modified: 1747694943879
+              modified: 1749175312017
               isPrivate: false
               sortKey: -1747356876104
             method: GET
             headers:
               - name: User-Agent
                 value: insomnia/11.1.0
+                id: pair_f120b0e976734df9beb9a16bb5a24552
+              - id: pair_8cb1dcff329d4081ba48f59e87e1bd30
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiS2FpbyBKb3JnZSIsImVtYWlsIjoia2Fpb2pvcmdlQGdtYWlsLmNvbSIsInR5cGVVc2VyIjoiYWRtaW4iLCJpYXQiOjE3NDkxNzM0MDUsImV4cCI6MTc0OTE5MTQwNX0.Wsjs_cyYBLMMP2OSOZNjzHiI8j_BDd8IL1rwFMHpZjs
+                disabled: false
             settings:
               renderRequestBody: true
               encodeUrl: true
@@ -593,12 +599,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/livro/harry
+          - url: localhost:3333/book/harry
             name: Buscar Livro Por Nome
             meta:
-              id: req_d289e33dc9244f83b07bda8db1a3c24f
+              id: req_abb497c9e5f44a74afc2aabdae825e4a
               created: 1747694824277
-              modified: 1747694993336
+              modified: 1749173240616
               isPrivate: false
               sortKey: -1747356855596.5
             method: GET
@@ -613,12 +619,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/livro
+          - url: localhost:3000/book
             name: Cadastro Livro
             meta:
-              id: req_090ab1e0c365492baee955b473071d13
+              id: req_a84ac7eda61043aba816b716b23940b3
               created: 1747694824278
-              modified: 1747694986921
+              modified: 1749173235322
               isPrivate: false
               sortKey: -1747356865850.25
             method: POST
@@ -643,12 +649,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/livro
+          - url: localhost:3000/book
             name: Atualizar Livro
             meta:
-              id: req_f691e13a7d88412ab73c3358e9046f47
+              id: req_ff3c06f65770449ea9a174e35df6a148
               created: 1747694824280
-              modified: 1747694948758
+              modified: 1749173215604
               isPrivate: false
               sortKey: -1747356870977.125
             method: PUT
@@ -674,12 +680,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: localhost:3333/livro/2
+          - url: localhost:3000/book/2
             name: Deletar Livro
             meta:
-              id: req_d4fb364afe914c4782b38b37e3de92cb
+              id: req_a3f2d5333ade4b60a1fbdd2286c40329
               created: 1747694824281
-              modified: 1747694969502
+              modified: 1749173227461
               isPrivate: false
               sortKey: -1747356868413.6875
             method: DELETE
@@ -698,12 +704,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-      - url: localhost:3333/login
+      - url: localhost:3000/login
         name: Login
         meta:
-          id: req_4b4523251d3d40d3bdca68565668cfd9
+          id: req_54c50ad9b23e458aa75d930aae964804
           created: 1748566512861
-          modified: 1748566818241
+          modified: 1749173272548
           isPrivate: false
           sortKey: -1747356826958
         method: POST
@@ -727,42 +733,10 @@ collection:
             send: true
             store: true
           rebuildPath: true
-  - url: localhost:3333/veiculos
-    name: My first request
-    meta:
-      id: req_0540f3a0ee22474ea6cf2fde0c00ee94
-      created: 1748486552226
-      modified: 1748486657248
-      isPrivate: false
-      sortKey: -1748486552226
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        		"placa": "1234567",
-        		"marca": "22",
-        		"modelo": "821",
-        		"ano_fabricacao": 1999,
-        		"cliente_id": 55
-        }
-    headers:
-      - name: Content-Type
-        value: application/json
-      - name: User-Agent
-        value: insomnia/11.1.0
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
   - url: https://parallelum.com.br/fipe/api/v1/carros/marcas/
     name: New Request
     meta:
-      id: req_98d43e9cbb64478c9e6b148e89502e9a
+      id: req_db0ae13c78c545b7a7e4c568fa7b2ba6
       created: 1748486883095
       modified: 1748487631317
       isPrivate: false
@@ -779,28 +753,16 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - name: TCC
-    meta:
-      id: ws-req_19877a18d9f34e62ae549ee090923db0
-      created: 1745446447653
-      modified: 1745446516640
-      sortKey: -1745446447653
-    settings:
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
 cookieJar:
   name: Default Jar
   meta:
-    id: jar_d6a4e06eb0f7202e6f0a142c1820c70b220726d3
+    id: jar_e87530876ddc46dc96a711195625c22f
     created: 1748486552208
     modified: 1748486552208
 environments:
   name: Base Environment
   meta:
-    id: env_d6a4e06eb0f7202e6f0a142c1820c70b220726d3
+    id: env_3584683f74ba454da43c1f11386a8824
     created: 1748486552207
     modified: 1748486552207
     isPrivate: false
