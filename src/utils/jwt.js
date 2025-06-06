@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 const secret = "EssaéAchaveDecriptogr@1@";
 
 function generateToken(payload) {
-    return jwt.sign(payload, secret, { expiresin: 60*60*5  })
+    return jwt.sign(payload, secret, { expiresIn: 60*60*5  })
 };
 
 function authenticate(request, response, next) {
@@ -15,7 +15,7 @@ function authenticate(request, response, next) {
     const bearer = authorization.split(" ")[0];
     const token = authorization.split(" ")[1];
 
-    if (!bearer != "Bearer") {
+    if (bearer != "Bearer") {
         return response.status(401).send({"message": "Token não possui 'Bearer'"});
     }
 

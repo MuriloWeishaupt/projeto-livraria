@@ -10,7 +10,7 @@ const author = new EntitySchema({
         nationality: {type: "varchar", length: 45},
         createAt: {type: "datetime", nullable: false, default: () =>
             "CURRENT_TIMESTAMP"},
-        deleteAt: {type: "datetime", nullable: true}   
+        deletedAt: {type: "datetime", nullable: true}   
     }
 });
 
