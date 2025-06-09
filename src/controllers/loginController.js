@@ -4,6 +4,8 @@ import { AppDataSource } from '../database/data-source.js';
 import { IsNull } from 'typeorm';
 import route from '../routes.js';
 import { generateToken } from '../utils/jwt.js';
+import generateNewPassword from '../utils/login.js';
+import nodemailer from "nodemailer";
 
 
 const routes = express.Router();
@@ -33,6 +35,35 @@ routes.post("/", async (request, response) => {
     return response.status(200).send({"response:": "Login efetuado com sucesso!", token});
 
     console.log(">>>>>>>>>", user)
+})
+
+
+routes.put("/reset", async (request, response) => {
+    const {email} = request.body;
+
+    const user = await userRepository.findOneBy({email, deleteAt: IsNull()});
+
+    if (!user) {
+        return response.status(400).send({"response": "Email inválido!"})
+    }
+
+    const newPassword = generateNewPassword();
+
+    await userRepository.update({email}, {password: newPassword})
+
+    function sendEmail() {
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "email com .end",
+                pass: "senha com .env"
+
+            }
+        })
+    }
+
+    return response.status(200).send({"response": "Senha enviada para o email cadastrado"})
+
 })
 
 
