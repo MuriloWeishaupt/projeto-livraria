@@ -1,8 +1,13 @@
 import express from "express";
 import routes from "./routes.js"
 import {AppDataSource} from "./database/data-source.js"
+import cors from "cors"
 
 const server = express();
+
+server.use(cors( {
+    origin: "*"
+}));
 
 server.use(express.json());
 
