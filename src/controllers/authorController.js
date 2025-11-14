@@ -1,6 +1,7 @@
 import express, { request, response } from "express";
 import author from "../entities/author.js";
 import { AppDataSource } from "../database/data-source.js";
+import { Like } from "typeorm";
 
 const routes = express.Router();
 const authorRepository = AppDataSource.getRepository(author);
@@ -39,7 +40,7 @@ try {
 
 routes.get("/:nameFound", async (request, response) => {  
     const {nameFound} = request.params;  
-    const authorFound = await userRepository.findBy({name:Like(`%${nameFound}%`)})
+    const authorFound = await authorRepository.findBy({name_author:Like(`%${nameFound}%`)})
     return response.status(200).send({"response":authorFound})
 });
 

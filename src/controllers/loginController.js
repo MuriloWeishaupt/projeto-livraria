@@ -23,7 +23,7 @@ routes.post("/", async (request, response) => {
     }
 
     const user = await userRepository.findOneBy({
-        email, password, deleteAt: IsNull()
+        email, password, deletedAt: IsNull()
     });
 
     if (!user) {
@@ -32,16 +32,18 @@ routes.post("/", async (request, response) => {
 
     const token = generateToken({user: user.name, email: user.email, typeUser: user.typeUser});
 
-    return response.status(200).send({"response:": "Login efetuado com sucesso!", token});
-
     console.log(">>>>>>>>>", user)
+
+    return response.status(200).json({"message": "Login efetuado com sucesso!", token});
+
+    
 })
 
 
 routes.put("/reset", async (request, response) => {
     const {email} = request.body;
 
-    const user = await userRepository.findOneBy({email, deleteAt: IsNull()});
+    const user = await userRepository.findOneBy({email, deletedAt: IsNull()});
 
     if (!user) {
         return response.status(400).send({"response": "Email inválido!"})

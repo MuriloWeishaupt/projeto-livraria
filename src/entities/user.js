@@ -11,7 +11,7 @@ const user = new EntitySchema({
         typeUser: {type: "enum", enum: ["admin", "comum"], nullable: false},
         createAt: {type: "datetime", nullable: false, default: () =>
             "CURRENT_TIMESTAMP"},
-        deleteAt: {type: "datetime", nullable: true}   
+        deletedAt: {type: "datetime", nullable: true}   
     }
 });
 
